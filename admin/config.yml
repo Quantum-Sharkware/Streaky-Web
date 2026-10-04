@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "website"
+    label: "Website"
+    files:
+      - name: "site_content"
+        label: "Streaky Website"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Quick description", name: "description", widget: "text" }
+          - label: "Currently playing"
+            name: "games"
+            widget: "list"
+            field: { label: "Game", name: "game", widget: "string" }
+          - label: "Favourite characters"
+            name: "characters"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.game}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Game", name: "game", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Post text", name: "body", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image description", name: "imageAlt", widget: "string", required: false }

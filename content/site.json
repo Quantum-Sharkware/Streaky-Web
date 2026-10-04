@@ -1,0 +1,33 @@
+{
+  "name": "Streaky :3",
+  "description": "Quick description",
+  "games": [
+    "Genshin Impact",
+    "Honkai: Star Rail",
+    "Omori",
+    "Roblox"
+  ],
+  "characters": [
+    {
+      "name": "Arlecchino",
+      "game": "Genshin Impact",
+      "image": "assets/images/arlecchino.png"
+    },
+    {
+      "name": "Mortenax Blade",
+      "game": "Honkai: Star Rail",
+      "image": "assets/images/mortenax-blade.png"
+    },
+    {
+      "name": "Firefly",
+      "game": "Honkai: Star Rail",
+      "image": "assets/images/firefly.png"
+    },
+    {
+      "name": "Castorice",
+      "game": "Honkai: Star Rail",
+      "image": "assets/images/castorice.png"
+    }
+  ],
+  "posts": []
+}
