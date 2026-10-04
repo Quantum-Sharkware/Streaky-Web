@@ -1,5 +1,5 @@
 {
-  "name": "Streaky:3",
+  "name": "Streaky :3",
   "description": "Quick description",
   "games": [
     "Genshin Impact",
@@ -29,5 +29,12 @@
       "image": "assets/images/uploads/castorice.png"
     }
   ],
-  "posts": []
+  "posts": [
+    {
+      "date": "01",
+      "title": "Test",
+      "imageAlt": "",
+      "body": "wawawaawaw"
+    }
+  ]
 }
