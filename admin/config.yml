@@ -3,7 +3,7 @@ backend:
   branch: main
 
 media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
+public_folder: "assets/images/uploads"
 
 collections:
   - name: "website"
@@ -19,10 +19,13 @@ collections:
           - label: "Currently playing"
             name: "games"
             widget: "list"
+            collapsed: false
+            summary: "{{fields.game}}"
             field: { label: "Game", name: "game", widget: "string" }
           - label: "Favourite characters"
             name: "characters"
             widget: "list"
+            collapsed: false
             summary: "{{fields.name}} — {{fields.game}}"
             fields:
               - { label: "Name", name: "name", widget: "string" }
@@ -32,6 +35,7 @@ collections:
             name: "posts"
             widget: "list"
             required: false
+            collapsed: false
             summary: "{{fields.title}}"
             fields:
               - { label: "Date", name: "date", widget: "string" }
