@@ -3,7 +3,7 @@ backend:
   branch: main
 
 media_folder: "assets/images/uploads"
-public_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
 collections:
   - name: "website"
@@ -14,32 +14,51 @@ collections:
         file: "content/site.json"
         format: "json"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Quick description", name: "description", widget: "text" }
+          - label: "Profile & appearance"
+            name: "profile"
+            widget: "object"
+            collapsed: false
+            summary: "{{fields.name}}"
+            hint: "Update the main profile information and artwork shown at the top of the website."
+            fields:
+              - { label: "Display name", name: "name", widget: "string", hint: "The large name shown under the profile picture." }
+              - { label: "Quick description", name: "description", widget: "text", hint: "A short introduction displayed below the profile details." }
+              - { label: "Profile picture", name: "image", widget: "image", choose_url: false, allow_multiple: false, hint: "Square images work best because the website crops this into a circle." }
+              - { label: "Top banner", name: "banner", widget: "image", choose_url: false, allow_multiple: false, hint: "Use a wide landscape image; the website crops it responsively." }
+              - { label: "Profile ring colour", name: "ringColor", widget: "color", allowInput: true, enableAlpha: false, default: "#775743", hint: "Choose the colour of the circular frame around the profile picture." }
           - label: "Currently playing"
             name: "games"
             widget: "list"
-            collapsed: false
+            label_singular: "Game"
+            collapsed: true
+            minimize_collapsed: true
             summary: "{{fields.game}}"
+            hint: "Each game is displayed as a rounded tag. Drag items to reorder them."
             field: { label: "Game", name: "game", widget: "string" }
           - label: "Favourite characters"
             name: "characters"
             widget: "list"
-            collapsed: false
+            label_singular: "Character"
+            collapsed: true
+            minimize_collapsed: true
             summary: "{{fields.name}} — {{fields.game}}"
+            hint: "Add, remove, edit, or drag characters into a new order."
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Game", name: "game", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image", name: "image", widget: "image", choose_url: false, allow_multiple: false, hint: "Portrait or square images crop best in the website's character circle." }
           - label: "Posts"
             name: "posts"
             widget: "list"
             required: false
-            collapsed: false
-            summary: "{{fields.title}}"
+            label_singular: "Post"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.date}} — {{fields.title}}"
+            hint: "Create updates for the Posts section. Posts appear in this order."
             fields:
               - { label: "Date", name: "date", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Post text", name: "body", widget: "text" }
-              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false, choose_url: false, allow_multiple: false }
               - { label: "Image description", name: "imageAlt", widget: "string", required: false }

@@ -1,6 +1,11 @@
 {
-  "name": "Streaky :3",
-  "description": "Quick description",
+  "profile": {
+    "name": "Streaky :3",
+    "description": "Quick description",
+    "image": "/assets/images/uploads/profile.webp",
+    "banner": "/assets/images/uploads/banner.webp",
+    "ringColor": "#775743"
+  },
   "games": [
     "Genshin Impact",
     "Honkai: Star Rail",
@@ -11,22 +16,22 @@
     {
       "name": "Arlecchino",
       "game": "Genshin Impact",
-      "image": "assets/images/uploads/arlecchino.png"
+      "image": "/assets/images/uploads/arlecchino.png"
     },
     {
       "name": "Mortenax Blade",
       "game": "Honkai: Star Rail",
-      "image": "assets/images/uploads/mortenax-blade.png"
+      "image": "/assets/images/uploads/mortenax-blade.png"
     },
     {
       "name": "Firefly",
       "game": "Honkai: Star Rail",
-      "image": "assets/images/uploads/firefly.png"
+      "image": "/assets/images/uploads/firefly.png"
     },
     {
       "name": "Castorice",
       "game": "Honkai: Star Rail",
-      "image": "assets/images/uploads/castorice.png"
+      "image": "/assets/images/uploads/castorice.png"
     }
   ],
   "posts": [
