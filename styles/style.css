@@ -40,11 +40,6 @@ a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 4px; bo
 .icon-link svg path { fill: currentColor; stroke: none; }
 .icon-link .icon-dot { fill: currentColor; stroke: none; }
 .icon-link .discord-icon { width: 20px; height: 20px; flex-basis: 20px; overflow: visible; }
-.icon-link .discord-icon .discord-bubble,
-.icon-link .discord-icon .discord-face { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
-.icon-link .discord-icon .discord-bubble { stroke-width: 1.7; }
-.icon-link .discord-icon .discord-face { stroke-width: 1.5; }
-.icon-link .discord-icon circle { fill: currentColor; stroke: none; }
 
 .hero { position: relative; height: clamp(180px, 28vw, 320px); overflow: hidden; background: var(--brown-1); }
 .hero-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 56%; filter: saturate(.72) contrast(.9); opacity: .8; }
